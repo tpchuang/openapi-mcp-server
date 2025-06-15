@@ -21,27 +21,24 @@
 This repository provides an example of a Model Context Protocol (MCP) server that dynamically exposes API endpoints as tools using an OpenAPI specification. It leverages the FastMCP framework to generate a server from an OpenAPI spec (such as a Swagger Bookstore API), and provides both a client and an interactive chatbot interface for interacting with the server using LLM-based agents (via LangChain and LangGraph).
 
 ## Features
-
-- **Dynamic API Exposure:** Loads an OpenAPI spec (e.g., `open-api_-spec.json`) and exposes its GET endpoints as callable tools via FastMCP.
+- **Dynamic API Exposure:** Loads an OpenAPI spec (e.g., `open-api-spec.json`) and exposes its GET endpoints as callable tools via FastMCP.
 - **LLM Integration:** The client and test scripts use OpenAI models (via LangChain) to interact with the server, allowing natural language queries to be mapped to API calls.
 - **Bookstore Example:** The main example is a Bookstore API, but the architecture is generic and can be adapted to any OpenAPI spec.
 - **Streaming & SSE:** The server uses Server-Sent Events (SSE) for real-time communication with clients.
 
 ## Main Components
-- **Dynamic API Exposure:** Loads an OpenAPI spec (e.g., `open-api_-spec.json`) and exposes its GET endpoints as callable tools via FastMCP.
+- **Dynamic API Exposure:** Loads an OpenAPI spec (e.g., `open-api-spec.json`) and exposes its GET endpoints as callable tools via FastMCP.
 - **LLM Integration:** The client and test scripts use OpenAI models (via LangChain) to interact with the server, allowing natural language queries to be mapped to API calls.
 - **Bookstore Example:** The main example is a Bookstore API, but the architecture is generic and can be adapted to any OpenAPI spec.
 - **Streaming & SSE:** The server uses Server-Sent Events (SSE) for real-time communication with clients.
 
 ## Main Components
-
 - `bookstore_mcp_server.py`: Starts the FastMCP server from an OpenAPI spec, exposing endpoints as tools.
 - `bookstore_mcp_client.py`: Example client that connects to the MCP server and invokes tools using an LLM agent.
 - `bookstore_interactive_agent.py`: Interactive chatbot for testing the server with natural language queries.
 - `pyproject.toml`: Project metadata and dependencies.
 
 ## Getting Started
-
 1. Place your OpenAPI spec (e.g., `openapi_spec.json`) in the project root.
 2. Install dependencies as specified in `pyproject.toml`.
 3. Run `bookstore_mcp_server.py` to start the server:
