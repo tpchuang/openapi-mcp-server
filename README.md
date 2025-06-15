@@ -1,14 +1,12 @@
 # Create MCP Server with OpenAPI Spec File
 
 - Easily turn any OpenAPI spec into a set of LLM-accessible tools using the Model Context Protocol (MCP).
-
-- ![mcp_openapi_demo](images/readme/mcp_openapi_demo.gif)
+ ![mcp_openapi_demo](images/readme/mcp_openapi_demo.gif)
 
 - This example is using https://fakerestapi.azurewebsites.net/index.html API
 
 ## MCP Architecture
-
-- ![mcp](images/readme/mcp.png)
+![mcp](images/readme/mcp.png)
 
 - **MCP Hosts**: Programs like Claude Desktop, IDEs, or AI tools that want to access data through MCP.
 - **MCP Clients**: Protocol clients that maintain 1:1 connections with servers.
