@@ -5,6 +5,25 @@
 
 - This example is using https://fakerestapi.azurewebsites.net/index.html API
 
+## Quick Start
+1. Install `uv` using brew or pip
+   ```shell
+   brew install uv
+   ```
+2. Setup `.env` file. See `.env.example` for instruction.
+3. Start server
+   ```shell
+   cd app
+   uv run bookstore_my_mcp_server.py
+   ```
+   Note. `uv run` will create python venv, activate it and install packages from `pyproject.toml` and `uv.lock` if the venv does not already exist. Otherwise, it activates the python venv and run the code.
+4. Start clien
+   ```shell
+   cd app
+   uv run bookstore_my_mcp_openai_client.py
+   ```
+5. There is a `bookstore_my_mcp_ollama_client.py` that can use locally hosted ollama server. However, I was unable to find a model that can use the MCP tools (could be due to machine limitation or incorrect configuration).
+
 ## MCP Architecture
 ![mcp](images/readme/mcp.png)
 
